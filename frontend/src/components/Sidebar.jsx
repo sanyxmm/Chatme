@@ -31,7 +31,6 @@ const Sidebar = () => {
     }
     const searchSubmitHandler = (e) => {
         e.preventDefault();
-        // console.log("Other Users:", otherUsers ?? "No users found");
         const conversationUser = otherUsers?.find((user)=> user.fullName.toLowerCase().includes(search.toLowerCase()));
         if(conversationUser){
             dispatch(setOtherUsers([conversationUser]));
